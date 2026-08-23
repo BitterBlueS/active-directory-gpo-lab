@@ -22,3 +22,4 @@
 - Issue: Initially installed the AD DS role and promoted the server to domain contoller before manually configuring the static IP, subnet mask, and DNS settings. The subsequent AD DS and DNS Server didn't align with my intended scheme, and making these changes later did not propogate them correctly.
 - Fix: Restored the VM from a baseline snapshot taken before any role installation, set the static IP/DNS settings with the appropriate adapter, and re-ran the AD DS installation and domain controller promotion.
 - Takeaway: Retroactive reconfiguration is unlikely, always verify, and take good snapshots at different points for reliable restoration and experimentation.
+
