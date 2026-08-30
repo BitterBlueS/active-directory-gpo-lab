@@ -36,5 +36,5 @@
 
 - Issue #3: Bulk script failed to create one user ("John Smith") because the "UPN value provided for addition/modification is not unique forest-wide."
 - Cause: The SamAccountName/UPN collision is a result of the existing testu user previously created, ie, Jenna Smith (JSmith) with the same account credentials
-- Takeaway: Naming collissions are a real provisioning concern and a real-world onboarding process needs defined conventions for handling duplicated name (whether it be appending a number to it or utilizing a middle initial). The missing 9th users will be uncorrected intentionally, it's a realistic example of a provisioning edge case/issue that while simplistic in nature is likely to happen in larger organizations.
+- Takeaway: Naming collissions are a real provisioning concern and a real-world onboarding process needs defined conventions for handling duplicated names (whether it be appending a number to it or utilizing a middle initial). The missing 9th user will be uncorrected intentionally, it's a realistic example of a provisioning edge case/issue that while simplistic in nature is likely to happen in larger organizations.
 
