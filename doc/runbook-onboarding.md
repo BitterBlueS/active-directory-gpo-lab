@@ -43,7 +43,7 @@ In case of an issue arising with the general onboarding script, the manual proce
 -General Script 'succeeds' but no account appears in AD: Check that 'users.csv' has a valid header row before assuming a deeper scripting issue. Console/echo output reporting success while generally accurate may include an error but still return as successful. Always verify with 'Get-ADUser' against the actual directory.
 
 ## Escalation
-
+If account creation failes for a reason not covered above (e.g., replication errors, permissions issues creating objects in AD), escalate to a senior admin rather than repeatedly retrying. Repeated failed attempts against AD can leave partial or orphaned objects.
 
 
 
