@@ -1,10 +1,10 @@
 # OU Structure $ User Provisioning
 
 ## OU Structure
--IT
--Sales
--HR
--Workstations (for computer objects, required for proper GPO targeting)
+- IT
+- Sales
+- HR
+- Workstations (for computer objects, required for proper GPO targeting)
 
 ## Users Created
 
@@ -20,10 +20,10 @@
 - IT-Staff (Global, Security) - created under IT OU, members: jsmith, jblake
 
 ## Verification
-- ran the powershell command 'Import-Csv .\users.csv | Format-Table' to confirm the CSV was parsing correctly before running the bulk user creation script
-- ran the powershell command 'Get-ADUser -Filter * -SearchBase "DC=corp,DC=local" | Select-OBject Name, SamAccountName confirmed users were created in AD
+- Ran the powershell command 'Import-Csv .\users.csv | Format-Table' to confirm the CSV was parsing correctly before running the bulk user creation script
+- Ran the powershell command 'Get-ADUser -Filter * -SearchBase "DC=corp,DC=local" | Select-OBject Name, SamAccountName confirmed users were created in AD
 
-### Additional Notes
+## Additional Notes
 
 - Issue: Could not reliably drag-and-drop or copy/paste the scripts between my host system and the DC VM, VirtualBox reported that Guest Additions were not installed
 - Fix: INstalled VirtualBox Guest Additions on the DC via Devices>Insert Guest Additions CD image>ran installer>rebooted), which enabled clipboard functionality between the host and guest after switching the vm settings to function bidirectionally

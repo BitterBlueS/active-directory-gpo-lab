@@ -1,6 +1,6 @@
 # Client Join
 
-##Environment
+## Environment
 - Windows 11 Enterprise (evaluation iso)
 - Virtualbox: 8GB RAM, 3 cores, EFI + TPM 2.0 enabled, internal network (intnet)
 
@@ -20,7 +20,7 @@
 ## Environment Decision: Domain Accounts Only
 - After losing practical access to the client's original local account after joining/changing to the CORP domain, and not maintaining appropriate documentation of the local account, I've decided to standardize the usage of domain accounts for all client login/testing going forward rather than attempting to restore local account access. This is likewise more representative of a real domain environment, where day-to-day workstation logins are domain-based rather than local accounts that complicate management.
 
-### Additional Notes
+## Additional Notes
 - Issue: Initially got an invalid username suggesstion when entering the CORP\Administrator information for the domain change
 - Fix: I was using the wrong slash, I used the forward slash (/) and not the backward slash (\) that is used in the NetBIOS-formatting with credentials
 - Takeaway: Double check for syntax and spelling errors that might result in unexpected or misleading error messages, verify the exact formatting required before considering a deeper connectivity or authentication issue

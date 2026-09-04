@@ -8,9 +8,9 @@ Provision a new employee's Active Directory account with correct OU placement, g
 Triggered by a new hire start date / HR onboarding request
 
 ## Prerequisites
--Domain Admin or delegated user-creation right in Active Directory Users and COmputers (or Active Directory Administrative Center)
--New Hire's: Full name, department (determines OU), and manager/role status (determines security group membership)
--Standard initial password per company password policy
+- Domain Admin or delegated user-creation right in Active Directory Users and COmputers (or Active Directory Administrative Center)
+- New Hire's: Full name, department (determines OU), and manager/role status (determines security group membership)
+- Standard initial password per company password policy
 
 ## Steps
 
@@ -35,12 +35,12 @@ In case of an issue arising with the general onboarding script, the manual proce
 7. Add the user to the appropriate security group(s) based on role (e.g., 'IT-Staff' for IT department members) via the group's 'Members' tab, or the user's 'Members of' tab.
 
 ## Verification
--Confirm the account exists and is in the correct OU through powershell: 'Get-ADUser -Identity <SamAccountName> -Properties MemberOf | Select-Object Name, DistinguishedName, MemberOf'
--Have the new hire (or IT if a further password change is not necessary) login from a domain-joined workstation to confirm authentication suceeds and group-based policies (e.g., password policy, application restrictions) apply as expected of their role
+- Confirm the account exists and is in the correct OU through powershell: 'Get-ADUser -Identity <SamAccountName> -Properties MemberOf | Select-Object Name, DistinguishedName, MemberOf'
+- Have the new hire (or IT if a further password change is not necessary) login from a domain-joined workstation to confirm authentication suceeds and group-based policies (e.g., password policy, application restrictions) apply as expected of their role
 
 ## Common Issues / Troubleshooting
--'SamAccountName / UPN Collision': IF a new hire shares initials and a last name with an existing user (e.g., two John Smith's), account creation will fail with a 'not unique forest-wide' error. Resolve by adjusting the naming convention for the new account (e.g., append a number or use a middle initial). Confirm existing conventions, following what the current team does, do not guess or create these account names arbitrarily.
--General Script 'succeeds' but no account appears in AD: Check that 'users.csv' has a valid header row before assuming a deeper scripting issue. Console/echo output reporting success while generally accurate may include an error but still return as successful. Always verify with 'Get-ADUser' against the actual directory.
+- 'SamAccountName / UPN Collision': IF a new hire shares initials and a last name with an existing user (e.g., two John Smith's), account creation will fail with a 'not unique forest-wide' error. Resolve by adjusting the naming convention for the new account (e.g., append a number or use a middle initial). Confirm existing conventions, following what the current team does, do not guess or create these account names arbitrarily.
+- General Script 'succeeds' but no account appears in AD: Check that 'users.csv' has a valid header row before assuming a deeper scripting issue. Console/echo output reporting success while generally accurate may include an error but still return as successful. Always verify with 'Get-ADUser' against the actual directory.
 
 ## Escalation
 If account creation failes for a reason not covered above (e.g., replication errors, permissions issues creating objects in AD), escalate to a senior admin rather than repeatedly retrying. Repeated failed attempts against AD can leave partial or orphaned objects.
