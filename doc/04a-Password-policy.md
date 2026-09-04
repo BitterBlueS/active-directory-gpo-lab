@@ -1,12 +1,12 @@
 # Group Policy: Password Policy
 
 ## Default Domain Policy (baseline)
-Reviewed via Group Policy Management > Default Domain Policy > Computer Configuration > Policies > Windiws Settings > Security Settings > Account Policies > Password Policy.
+Reviewed via Group Policy Management > Default Domain Policy > Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy.
 
 - Minimum password length: 7 (default)
 - Password history: 24 (default)
 - Complexity requirements: enabled (default)
-- Applies domain-wide - a single Default Domain Policy cannot have different settings per OU or group without a separate mechanism, hence the OU specific password policy below
+- Applies domain-wide. A single Default Domain Policy cannot have different settings per OU or group without a separate mechanism, hence the OU specific password policy below
 
 ## Enhanced Password Policy (PSO) : IT-Strict-Password-Policy
 Created via Active Ditectory Administrative Center > System > Password Settings Container > New > Password Settings.

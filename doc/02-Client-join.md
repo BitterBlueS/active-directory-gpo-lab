@@ -11,10 +11,10 @@
 ## Steps
 - Verified the connectivity/DNS resolution before joining the client vm to the domain via ping + nslookup commands
 - Joined the corp.local domain via the System Properties tab changing the domain/workgroup of the client, entering the CORP\Administrator information
-- Rebooted and confirmed the domain login, logged in with domain administrator accounter
+- Rebooted and confirmed the domain login, logged in with domain administrator account
 
 ## Verification
-- Ran the 'whoami' command line interface command and the '$env:USERDNSDOMAIN' powershell command to confirm the new domain identity on the client
+- Ran the 'whoami' command line interface command and the '$env:USERDNSDOMAIN' PowerShell command to confirm the new domain identity on the client
 - Ran the 'Get-ADComputer -Filter *' command on the DC server to confirm the server has identified and registered the client's computer as an object
 
 ## Environment Decision: Domain Accounts Only
@@ -26,6 +26,6 @@
 - Takeaway: Double check for syntax and spelling errors that might result in unexpected or misleading error messages, verify the exact formatting required before considering a deeper connectivity or authentication issue
 
 - Issue #2: After joining the client system to the domain I could no longer log into the original local account using just the username in addition to changes to the login screen
-- Fix: THe local account still exists but it requires ecplicit local-account notation to login including '.\username' or the selection of 'Other User' given it now defaults to the domain login
-- Takeaway: Domain join changes login defaults/expectations, it's critical to confirm the exact account information and formatting for local login in the future otherwise access to the local account might be lost. The issue is mute but worth keeping in mind considering I will create a new domain user back on the DC, confirming it's login capabilities and other functions through the client vm and system.
+- Fix: The local account still exists but it requires ecplicit local-account notation to login including '.\username' or the selection of 'Other User' given it now defaults to the domain login
+- Takeaway: Domain join changes login defaults/expectations, it's critical to confirm the exact account information and formatting for local login in the future otherwise access to the local account might be lost. The issue is mute but worth keeping in mind considering I will create new domain users back on the DC
 
