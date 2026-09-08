@@ -17,6 +17,7 @@ Build Documentation
 - [Group Policy: Password Policy](doc/04a-Password-policy.md)
 - [Group Policy: Software Restriction (AppLocker)](doc/04b-Software-restriction.md)
 - [Group Policy: Workstation Hardening](doc/04c-Workstation-hardening.md)
+- [Onboarding Script: Design Notes](doc/onboarding-script-notes.md)
 
 Runbooks
 - [Runbook: Onboarding](doc/runbook-onboarding.md)
