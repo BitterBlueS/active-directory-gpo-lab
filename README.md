@@ -11,18 +11,18 @@ Built it as a self-directed project to develop hands-on experience with core sys
 
 ## Contents
 Build Documentation
-- [DC Setup](doc/01-DC-setup.md)
-- [Client Join](doc/02-Client-join.md)
-- [OU Structure & User Provisioning](doc/03-OU-and-users.md)
-- [Group Policy: Password Policy](doc/04a-Password-policy.md)
-- [Group Policy: Software Restriction (AppLocker)](doc/04b-Software-restriction.md)
-- [Group Policy: Workstation Hardening](doc/04c-Workstation-hardening.md)
-- [Onboarding Script: Design Notes](doc/onboarding-script-notes.md)
+- [DC Setup](docs/01-DC-setup.md)
+- [Client Join](docs/02-Client-join.md)
+- [OU Structure & User Provisioning](docs/03-OU-and-users.md)
+- [Group Policy: Password Policy](docs/04a-Password-policy.md)
+- [Group Policy: Software Restriction (AppLocker)](docs/04b-Software-restriction.md)
+- [Group Policy: Workstation Hardening](docs/04c-Workstation-hardening.md)
+- [Onboarding Script: Design Notes](docs/onboarding-script-notes.md)
 
 Runbooks
-- [Runbook: Onboarding](doc/runbook-onboarding.md)
-- [Runbook: Access Change](doc/runbook-access-change.md)
-- [Runbook: Workstation Hardening](doc/runbook-auth-troubleshooting.md)
+- [Runbook: Onboarding](docs/runbook-onboarding.md)
+- [Runbook: Access Change](docs/runbook-access-change.md)
+- [Runbook: Workstation Hardening](docs/runbook-auth-troubleshooting.md)
 
 Scripts
 - [General User Provisioning](scripts/general-onboarding.ps1)
