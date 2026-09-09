@@ -26,7 +26,6 @@ function New-RandomPassword {
 }
 
 
-
 # Validation pass: catch problems before provisioning
 $users = Import-Csv -Path $CsvPath
 $validationErrors = @()
@@ -45,7 +44,7 @@ foreach ($user in $users) {
 }
 
 if ($validationErrors.Count -gt 0) {
-    Write-Host "Validation failed — no accounts were created:" -ForegroundColor Red
+    Write-Host "Validation failed - no accounts were created:" -ForegroundColor Red
     $validationErrors | ForEach-Object { Write-Host " - $_" -ForegroundColor Red }
     return
 }
@@ -81,7 +80,7 @@ foreach ($user in $users) {
         }
     }
     catch {
-        Write-Host "FAILED: $($user.SamAccountName) — $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "FAILED: $($user.SamAccountName) - $($_.Exception.Message)" -ForegroundColor Red
         $results += [PSCustomObject]@{
             SamAccountName = $user.SamAccountName
             Status         = "Failed: $($_.Exception.Message)"
@@ -95,5 +94,7 @@ foreach ($user in $users) {
 
 # Log results
 $results | Export-Csv -Path $LogPath -NoTypeInformation
-Write-Host "`nLog written to $LogPath"
-Write-Host "Note: log contains temporary passwords — handle/store securely, delete after distribution."
+Write-Host ""
+Write-Host "Log written to $LogPath"
+Write-Host "Note: log contains temporary passwords. Handle/store securely, delete after distribution."
+
