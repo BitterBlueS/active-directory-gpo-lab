@@ -26,6 +26,19 @@ This revised script is a step up from the original version, but it's still very 
 
 These are just a few of the many things that are beyond the scope of this lab project without a number of such technologies or systems directly relevant to an organizational context, but they are steps worth keeping in mind moving forward, particularly when I consider what integration is necessary for automation to be successful.
 
+- Original Onboarding Script Result without Validation
+
+![Onboarding_script](/images/General-Onboarding-Script-Creates-Users.png)
+
+- Improved Onboarding Script Error
+
+![Improved_script](/images/Improved-Script-Error.png)
+
+- Improved Onboarding Script Successful
+
+![Improved_script_success](/images/Improved-Script-Successful.png)
+
+
 ## Takeaway
 
 Automation functions far beyond a simple did it work or not. Automation requires validation, accurate reporting, and established procedures that support higher level supervision. The revised script is a huge improvement, and some of the changes directly trace back to issues I had in the lab, while others were more security-focused changes that I would consider best practices at a baseline level.
