@@ -34,6 +34,7 @@ Scripts
 
 ### Status
 Complete
+WSL2 Functioning as Well
 
 
 
