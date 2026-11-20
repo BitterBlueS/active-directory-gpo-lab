@@ -17,6 +17,10 @@
 ## Verification
 - Ran the 'dcdiag' command in PowerShell with a majority of core tests passing, minus a few that are not configured or otherwise functioning given the VM environment.
 - Ran the 'Get-ADDomain' command in PowerShell as well to confirm a number of domain properties.
+- Domain and DC promotion
+
+![DC_promotion](/images/Domain-and-DC-Promotion.png)
+
 
 ## Additional Notes
 - Issue: Initially installed the AD DS role and promoted the server to domain controller before manually configuring the static IP, subnet mask, and DNS settings. The subsequent AD DS and DNS Server didn't align with my intended scheme, and making these changes afterward did not propagate them correctly.

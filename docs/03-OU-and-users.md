@@ -23,6 +23,10 @@
 ## Verification
 - Ran the PowerShell command 'Import-Csv .\users.csv | Format-Table' to confirm the CSV was parsing correctly before running the general onboarding script
 - Ran the PowerShell command 'Get-ADUser -Filter * -SearchBase "DC=corp,DC=local" | Select-OBject Name, SamAccountName confirmed users were created in AD
+- Confirming Client in OU
+
+![Client_OU](/images//Client-Workstation-Properly-within-OU.png)
+
 
 ## Additional Notes
 - Issue: Could not reliably drag-and-drop or copy/paste the scripts between my host system and the DC VM, VirtualBox reported that Guest Additions were not installed

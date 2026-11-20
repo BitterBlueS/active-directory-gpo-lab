@@ -25,6 +25,14 @@ Created via Active Ditectory Administrative Center > System > Password Settings 
 
 ## Verification
 - Ran the powershell command 'Get-ADUserResultantPasswordPolicy -Identity SWinters' which returned 'IT-Strict-Password-Policy' as the resultant policy for SWinters, correctly overriding the domain defaults for IT-Staff group members.
+- Default Pasword Policy
+
+![Default_policy](/images/Default-Password-Policy.png)
+
+- New Password Policy in Effect
+
+![Password_policy](/images/New-Password-Policy-in-Effect.png)
+
 
 ### Takeaways
 - PSOs apply directly to users or groups, not OUs which seems quite easy to mix up. Precendence determines which PSO wins if a users is a member of multiple groups with different PSOs applied.

@@ -15,11 +15,23 @@
 - Default Executable Rules created first (baseline allow for Program Files/Windows) before adding any deny rules
 - Deny rule: cmd.exe (%SYSTEM32%\cmd.exe), scoped to [Restricted-Members], reducing shell access for standard users after creating that security group and adding the HR and Sales users as members
 
-## Testing
+## Verification
 - Ran the 'Gpupdate /force' command on the DC to update group policy settings
 - Attempted to open Command Prompt on a restricted user in Restricted-Members and was blocked, with a system adminisitrator block message
 - Verified block event in Event Viewer with event ID 8004 and that 'cmd.exe was prevented from running' for ARivera
 - IT-Staff/Administrator: cmd.exe opened normally, confirming the deny rule correctly excluded IT given it's limited scope to users in the security group 'Restricted-members'
+- Applocker Restriction Configuration
+
+![Applocker_configuration](/images/Applocker-Restriction-Configuration.png)
+
+- Applocker Restriction Preventing Access
+
+![Applocker_prevention](/images/Applocker-Restrictions-Preventing-Access.png)
+
+- Event Tracker 8004 of Applocker Restriction
+
+![Event_tracker](/images/Event-Tracker-8004-Error-Blocking-Command-Line.png)
+
 
 ## Additional Notes
 - Issue: After scoping the deny rule to Restricted-members, testing as CORP\Administrator showed cmd.exe/Windows Terminal blocked as well. Administrator is not a member of Restricted-members

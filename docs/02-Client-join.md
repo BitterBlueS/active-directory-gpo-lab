@@ -16,6 +16,14 @@
 ## Verification
 - Ran the 'whoami' command line interface command and the '$env:USERDNSDOMAIN' PowerShell command to confirm the new domain identity on the client
 - Ran the 'Get-ADComputer -Filter *' command on the DC server to confirm the server has identified and registered the client's computer as an object
+- Successful Client Join
+
+![Client_join](/images/Successful-Client-Join-to-Corp-Domain.png)
+
+- Confirming Client is Joined to Domain
+
+![Corp_domain](/images/Confirming-Client-in-Corp-Domain.png)
+
 
 ## Environment Decision: Domain Accounts Only
 - After losing practical access to the client's original local account after joining/changing to the CORP domain, and not maintaining appropriate documentation of the local account, I've decided to standardize the usage of domain accounts for all client login/testing going forward rather than attempting to restore local account access. This is likewise more representative of a real domain environment, where day-to-day workstation logins are domain-based rather than local accounts that complicate management.
